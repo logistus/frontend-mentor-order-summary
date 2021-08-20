@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Frontend Mentor | Order summary card</title>
+
+    <style>
+      * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+      }
+      body {
+        background-image: url(images/pattern-background-mobile.svg);
+        background-repeat: no-repeat;
+        background-position: top center;
+        background-attachment: fixed;
+        background-size: 100%;
+        background-color: hsl(225, 100%, 94%);
+        font-family: "Red Hat Display", sans-serif;
+        font-size: 16px;
+      }
+      .container {
+        max-width: 1440px;
+        margin: 0 auto;
+      }
+
+      .card {
+        margin: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        overflow: hidden;
+        text-align: center;
+      }
+
+      .card-header img {
+        width: 100%;
+      }
+
+      .card-title {
+        font-weight: 900;
+        font-size: 30px;
+        color: #1a2b57;
+        margin-top: 35px;
+      }
+
+      .card-content {
+        padding: 15px;
+      }
+
+      .card-body {
+        color: #7a7f95;
+      }
+
+      .card-summary {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px;
+        background-color: #f8f9fe;
+        padding: 25px;
+        border-radius: 10px;
+        margin: 20px 0;
+      }
+
+      .card-summary-left {
+        display: flex;
+      }
+
+      .card-summary-title {
+        color: #091336;
+        font-weight: 700;
+      }
+
+      .card-summary-icon {
+        margin-right: 25px;
+      }
+
+      .card-summary-price {
+        color: #787c97;
+      }
+
+      .card-summary a:link,
+      .card-summary a:visited {
+        color: hsl(245, 75%, 52%);
+        text-decoration: underline;
+        font-weight: bold;
+      }
+
+      .card-summary a:hover {
+        text-decoration: none;
+      }
+
+      .card-footer {
+        display: flex;
+        flex-direction: column;
+      }
+
+      a.proceed,
+      a.cancel {
+        text-decoration: none;
+        font-weight: bold;
+      }
+      a.proceed {
+        background-color: hsl(245, 75%, 52%);
+        color: #fff;
+        padding: 15px;
+        margin: 10px 0 15px;
+        border-radius: 10px;
+        width: 100%;
+      }
+
+      a.cancel {
+        color: hsl(224, 23%, 55%);
+        margin-bottom: 15px;
+      }
+
+      a.cancel:hover {
+        color: #000;
+      }
+
+      a.proceed:hover {
+        background-color: #766cf1;
+      }
+
+      .attribution {
+        margin: 20px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+
+      @media screen and (min-width: 365px) {
+        body {
+          background-image: url(images/pattern-background-desktop.svg);
+        }
+        .card {
+          width: 450px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <div class="card-header">
+          <img src="images/illustration-hero.svg" />
+        </div>
+        <div class="card-title">Order Summary</div>
+        <div class="card-content">
+          <div class="card-body">
+            <p>
+              You can now listen to millions of songs, audiobooks, and podcasts
+              on any device anywhere you like!
+            </p>
+            <div class="card-summary">
+              <div class="card-summary-left">
+                <img
+                  src="images/icon-music.svg"
+                  alt="Music"
+                  class="card-summary-icon"
+                />
+                <div>
+                  <div class="card-summary-title">Annual Plan</div>
+                  <div class="card-summary-price">$59.99/year</div>
+                </div>
+              </div>
+              <div><a href="#">Change</a></div>
+            </div>
+          </div>
+          <div class="card-footer">
+            <a href="#" class="proceed">Proceed to Payment</a>
+            <a href="#" class="cancel">Cancel Order</a>
+          </div>
+        </div>
+      </div>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Sinan Yilmaz</a>.
+      </div>
+    </div>
+  </body>
+</html>
